@@ -1,0 +1,131 @@
+.reviews {
+  margin-bottom: 120px;
+  color: $black;
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 88px;
+  }
+
+  &__slide {
+    max-width: 311px;
+
+    span {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 10px;
+
+    }
+
+    p {
+      @include text-shorten(10);
+      font-size: 18px;
+    }
+  }
+
+  &__star {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: block;
+    padding: 11px 44px;
+    border: 1px solid $black;
+    border-radius: 27px;
+    transition: color 0.3s,
+      background-color 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  & .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 40px);
+    display: flex;
+    font-size: 0;
+
+
+    & li {
+      position: relative;
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &::before {
+        @include pseudo;
+        width: 8px;
+        height: 8px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+      }
+    }
+
+    & .slick-active {
+      &::before {
+        background-color: $accent
+      }
+    }
+  }
+
+  & .slick-next.slick-arrow,
+  .slick-prev.slick-arrow {
+    font-size: 0;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      width: 64px;
+      height: 64px;
+      background-color: $accent;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-160%);
+    }
+
+    &::after {
+      @include pseudo;
+      width: 15px;
+      height: 29px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 40%;
+      left: 27px;
+      transform: translateY(-160%);
+    }
+  }
+
+  & .slick-next.slick-arrow {
+
+    &::after {
+      background-image: url('../../../images/icons/reviews/arrow-right.svg');
+    }
+  }
+
+  & .slick-prev.slick-arrow {
+
+    &::before {
+      left: -115px;
+    }
+
+    &::after {
+      background-image: url('../../../images/icons/reviews/arrow-left.svg');
+      left: -94px;
+    }
+  }
+}

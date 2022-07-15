@@ -1,15 +1,15 @@
 .header {
-  padding: 30px 0;
+  padding: 34px 0 10px;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
   transition: padding 0.4s,
     transform 0.3s;
-  background-color: #8AB6A9;
   animation-name: header;
   animation-fill-mode: both;
   animation-duration: 1s;
+  z-index: 1;
 
   @keyframes header {
 
@@ -37,7 +37,7 @@
   &--scroll {
     transition: padding 0.4s;
     padding: 5px;
-    background-color: #8ab6a963;
+    background-color: #fbce4570;
     animation-name: header-scroll;
     animation-fill-mode: both;
     animation-duration: 1s;
@@ -56,6 +56,7 @@
         transform: scale3d(1, 1, 1);
       }
     }
+
   }
 
   &__inner {
@@ -68,19 +69,123 @@
     }
   }
 
-
   .header-menu {
     display: flex;
 
     &__item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 36px;
+      }
+
+      &:last-child {
+        margin-right: 145px;
       }
     }
 
     @include max-w($lg) {
       display: none;
     }
+
+    &__form {
+      margin-right: 35px;
+      padding-left: 18px;
+      position: relative;
+
+      &::before {
+        background-image: url('../../images/sprite.svg#header--marker');
+        background-position: center;
+        background-repeat: no-repeat;
+        @include pseudo;
+        width: 53px;
+        height: 18px;
+        left: -10px;
+        top: 7px;
+      }
+    }
+
+    &__phone {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 20px;
+
+      &--scroll {
+        margin-bottom: 0;
+      }
+    }
+
+    &__phone-btn {
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+
+    &__phone-link {
+      font-weight: 600;
+      color: $black;
+    }
+  }
+}
+
+.jq-selectbox {
+
+  &__select {
+    height: 32px;
+    padding: 0 24px 0 10px;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    background: transparent;
+    ;
+    box-shadow: transparent;
+    font: 14px gilroy,
+      sans-serif;
+    line-height: 32px;
+    color: $basic;
+    text-shadow: none;
+    box-shadow: none;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &:hover {
+      background: none;
+      color: $accent;
+    }
+
+    &:active {
+      background: none;
+      box-shadow: none;
+    }
   }
 
+  &__trigger {
+    border-left: none;
+  }
+
+  &__trigger-arrow {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-top: 3px solid #999;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    transition: border-top-color 0.3s;
+  }
+
+  &.focused .jq-selectbox__select {
+    border: none;
+  }
+
+  & li:hover {
+    background-color: $accent;
+  }
+
+  &.jq-selectbox:hover .jq-selectbox__trigger-arrow {
+    border-top-color: $accent;
+  }
+
+  &.jqselect.header-menu__select.header-menu__option {
+    transition: all 0.3s;
+  }
 }

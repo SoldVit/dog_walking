@@ -1,0 +1,104 @@
+<section class="price">
+
+  <div class="container">
+    
+    <h2 class="price__title title">
+      Цены
+    </h2>
+    <div class="price__content">
+      <div class="price__content-border">
+        <h3 class="price__content-title">
+          Выберите желаемое количество услуг
+        </h3>
+        <div class="price__inner">
+          <form class="price__chekbox-form" action="#">
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox" checked>
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Выгул в свободном темпе
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Выгул активный, игра с собакой
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Выгул с элементами дрессуры
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox" checked>
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Мытьё лап после выгула
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Кормление сухим кормом
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Отвезти к ветиринару (60 минут)
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Фото и видео отчёт
+              </span>
+            </label>
+          </form>
+
+          <div class="price__total">
+            <div class="price__total-prompt">
+              <span class="price__total-text">
+                Количество выгулов:
+              </span>
+              <span class="price__total-icon"
+                data-tooltip="Количество выгулов будет привязано к вашему номеру телефона">
+                i
+              </span>
+            </div>
+            <input class="price__total-amount" type="number" min="1" max="100" value="1">
+            <div class="price__total-expert">
+              <span class="price__total-span">Выгульщик</span>
+              <form class="price__total-form" action="#">
+                <label class="price__total-label">
+                  <select class="price__total-select" name="expert">
+                    <option value="every">Любой</option>
+                    <option value="anna">Анна</option>
+                    <option value="varvara">Варвара</option>
+                    <option value="rustam">Рустам</option>
+                    <option value="anastasia">Анастасия</option>
+                  </select>
+                </label>
+              </form>
+            </div>
+            <div class="price__total-wrapper">
+              <span class="price__total-number">
+                Итого: <span>250 ₽</span>
+              </span>
+              <button class="price__total-btn btn" type="submit">
+                Заказать услугу
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,32 +1,55 @@
 <header class="header">
+
   <div class="container">
+
     <nav class="header__inner">
 
       <a class="logo" href="index.html">
-        <img class="logo__img" width="200" height="39" src="" alt="Логотип сайта">
+        <svg class="logo">
+          <use href="../../images/sprite.svg#logo"></use>
+        </svg>
       </a>
 
-        @include('../components/_burger.html', {
-        'class-btn': 'burger'
-        })
-        <ul class="header-menu">
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-header">
-              Главная
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-categories">
-              Блюда
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-contacts">
-              Контакты
-            </a>
-          </li>
-        </ul>
-
+      @include('../components/_burger.html', {
+      'class-btn': 'burger'
+      })
+      <ul class="header-menu">
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-header">
+            Наши специалисты
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-categories">
+            Приложение
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-contacts">
+            Цены
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-contacts">
+            Отзывы
+          </a>
+        </li>
+      </ul>
+      <form class="header-menu__form" action="#">
+        <label class="header-menu__label">
+          <select class="header-menu__select" name="city">
+            <option class="header-menu__option" value="value">Воронеж</option>
+            <option class="header-menu__option" value="value">Москва</option>
+            <option class="header-menu__option" value="value">Краснодар</option>
+          </select>
+        </label>
+      </form>
+      <div class="header-menu__phone">
+        <button class="header-menu__phone-btn status wrapper-click">
+          Заказать звонок
+        </button>
+        <a class="header-menu__phone-link status wrapper-click" href="tel:+7909553645"> +7 (909) 555-36-45</a>
+      </div>
     </nav>
   </div>
 </header>

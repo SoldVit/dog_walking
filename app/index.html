@@ -7,64 +7,856 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="512x512" href="images/icons/favicons/favicon512x512.png">
     <link rel="icon" sizes="32x32" href="images/icons/favicons/favicon32x32.png">
-    <title> | </title>
+    <title>DOGGY DO-Выгул собак</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
     
 <header class="header">
+
   <div class="container">
+
     <nav class="header__inner">
 
       <a class="logo" href="index.html">
-        <img class="logo__img" width="200" height="39" src="" alt="Логотип сайта">
+        <svg class="logo">
+          <use href="../../images/sprite.svg#logo"></use>
+        </svg>
       </a>
 
-         <button class="burger" type="button">
+       <button class="burger" type="button">
    <span class="burger__line"></span>
    <span class="sr-only">Открыть меню</span>
  </button>
  
-        <ul class="header-menu">
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-header">
-              Главная
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-categories">
-              Блюда
-            </a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link wrapper-click" href="@link-contacts">
-              Контакты
-            </a>
-          </li>
-        </ul>
-
+      <ul class="header-menu">
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-header">
+            Наши специалисты
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-categories">
+            Приложение
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-contacts">
+            Цены
+          </a>
+        </li>
+        <li class="header-menu__item">
+          <a class="header-menu__link wrapper-click status" href="@link-contacts">
+            Отзывы
+          </a>
+        </li>
+      </ul>
+      <form class="header-menu__form" action="#">
+        <label class="header-menu__label">
+          <select class="header-menu__select" name="city">
+            <option class="header-menu__option" value="value">Воронеж</option>
+            <option class="header-menu__option" value="value">Москва</option>
+            <option class="header-menu__option" value="value">Краснодар</option>
+          </select>
+        </label>
+      </form>
+      <div class="header-menu__phone">
+        <button class="header-menu__phone-btn status wrapper-click">
+          Заказать звонок
+        </button>
+        <a class="header-menu__phone-link status wrapper-click" href="tel:+7909553645"> +7 (909) 555-36-45</a>
+      </div>
     </nav>
   </div>
 </header>
 
 <main class="main">
+  
+<section class="hero">
 
+  <div class="container">
+
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Выгул собак от 200 ₽ в час
+        </h1>
+        <h2 class="hero__subtitle">
+          Заберём и выгуляем вашего питомца
+          в пределах Северного района
+        </h2>
+        <div class="hero__link-box">
+          <button class="hero__btn btn">
+            Заказать пробный выгул
+          </button>
+          <a class="hero__link wrapper-click status" href="#">
+            Скачать карту прогулок
+          </a>
+        </div>
+        <p class="hero__text">
+          Забота о четвероногих на нас:
+        </p>
+        <ul class="hero__items">
+          <li class="hero__item">
+            <a class="hero__item-link hero__item-link--equipment status wrapper-click" href="#">
+              Экипировка питомца GPS
+            </a>
+          </li>
+          <li class="hero__item">
+            <a class="hero__item-link hero__item-link--games status wrapper-click  animate__animated animate__bounce"
+              href="#">
+              Бег и игры с питомцем
+            </a>
+          </li>
+          <li class="hero__item">
+            <a class="hero__item-link hero__item-link--reports status wrapper-click" href="#">
+              Отчеты в приложении
+            </a>
+          </li>
+          <li class="hero__item">
+            <a class="hero__item-link hero__item-link--food status wrapper-click" href="#">
+              Накормим и помоем
+            </a>
+          </li>
+        </ul>
+      </div> 
+
+  </div>
+</section>
+
+<section class="advantage">
+
+  <div class="container advantage__container">
+
+    <h2 class="advantage__title title">
+      Почему стоит выбрать нас:
+    </h2>
+
+    <div class="advantage__inner">
+      <ul class="advantage__items advantage__items--left animate__lightSpeedInLeft wow animate__animated">
+        <li class="advantage__item advantage__item--left">
+          Соблюдение норм мест выгула<br> по законодательству
+        </li>
+        <li class="advantage__item advantage__item--left">
+          Фото/видео отчёт<br> возможен в прямом эфире
+        </li>
+        <li class="advantage__item advantage__item--left">
+          Расчешем и проведём<br> гигиенические процедуры
+        </li>
+      </ul>
+      <div class="advantage__img animate__animated animate__zoomInLeft wow"></div>
+      <ul class="advantage__items advantage__items--right animate__lightSpeedInRight wow animate__animated">
+        <li class="advantage__item advantage__item--right">
+          Всегда с собой<br> аптечка первой помощи
+        </li>
+        <li class="advantage__item advantage__item--right">
+          Прогулка со страхующим<br> ошейником и с поясом выгульщика
+        </li>
+        <li class="advantage__item advantage__item--right">
+          Брелок с контактными<br> данными в подарок
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="application">
+
+  <div class="container">
+
+    <div class="application__inner">
+      <div class="application__content">
+        <h2 class="application__title title">
+          Удобное мобильное приложение DoggyDo
+        </h2>
+        <div class="application__text">
+          Отслеживать выгулы стало ещё удобнее!
+          Получите ссылку на скачивание по SMS
+        </div>
+        <form class="application__link-box">
+          <label class="application__label">
+            <input class="application__phone" type="tel" name="phone" placeholder="+7 (999) 999-99-99">
+          </label>
+          <button class="application__btn animate__tada wow animate__animated" data-wow-delay="2s">
+            Попробовать
+            <svg class="application__btn-img">
+              <use href="../../../images/sprite.svg#application--arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="application__img wow animate__animated animate__bounceInUp" data-wow-offset="200"></div>
+    </div>
+  </div>
+</section>
+<section class="command">
+
+  <div class="container">
+
+    <h2 class="command__title title">
+      НАШИ выгульщики
+    </h2>
+
+    <div class="command__box-text">
+      <p class="command__text">
+        В нашем штате самые удивительные специалисты города искренне любящие животных и знающие особенности обращения с
+        каждой из пород.
+      </p>
+      <a class="command__link" href="$">
+        Познакомтесь с каждым из них подробнее.
+      </a>
+    </div>
+
+    <ul class="command__tabs animate__fadeInRight animate__animated wow">
+      <li class="command__tab">
+        <a class="command__tab-link" href="#tab-1">
+          Анна
+        </a>
+      </li>
+      <li class="command__tab">
+        <a class="command__tab-link" href="#tab-2">
+          Варвара
+        </a>
+      </li>
+      <li class="command__tab">
+        <a class="command__tab-link" href="#tab-3">
+          Рустам
+        </a>
+      </li>
+      <li class="command__tab">
+        <a class="command__tab-link" href="#tab-4">
+          Анастасия
+        </a>
+      </li>
+    </ul>
+
+    <article class="expert expert--active" id="tab-1">
+      <div class="expert__inner">
+
+        <div class="expert__img-box carousel w-10/12 max-w-5xl mx-auto" id="mainCarousel">
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/anna/900x600/1.jpg"
+            data-fancybox="gallery">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/anna/600x400/1.jpg"
+              alt="Анна">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/anna/900x600/2.jpg"
+            data-fancybox="gallery">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/anna/600x400/2.jpg"
+              alt="Анна">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/anna/900x600/3.jpg"
+            data-fancybox="gallery">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/anna/600x400/3.jpg"
+              alt="Анна">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/anna/900x600/4.jpg"
+            data-fancybox="gallery">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/anna/600x400/4.jpg"
+              alt="Анна">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/anna/900x600/5.jpg"
+            data-fancybox="gallery">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/anna/600x400/5.jpg"
+              alt="Анна">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/anna/900x600/6.jpg"
+            data-fancybox="gallery">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/anna/600x400/6.jpg"
+              alt="Анна">
+          </div>
+        </div>
+
+        <div class="expert__info">
+          <div class="expert__name">
+            <p>
+              Анна Рывкова
+            </p>
+          </div>
+          <div class="expert__tel">
+            <a href="tel:+79543528892">
+              +7 (954) 352-88-92
+            </a>
+          </div>
+          <div class="expert__address">
+            <p>
+              Северный район, ЖК Олимпийский и Московский проспект.
+            </p>
+          </div>
+          <div class="expert__resume">
+            <p>
+              <span>
+                О себе:
+              </span>
+              26 лет, коренная жительница Воронежа, образование высшее юридическое, на данный момент
+              безработная.
+              В наличии 2 своих собаки (овчарка и такса).
+              С овчаркой активно занимаюсь дрессировкой: фризби, фризби-фристайлом, аджилити, пастьбой.
+            </p>
+          </div>
+          <button class="expert__btn btn">
+            Забронировать
+            <svg class="expert__btn-img">
+              <use href="../../../images/sprite.svg#application--arrow">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="expert__thumb carousel max-w-xl mx-auto" id="thumbCarousel">
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/anna/100x100/1.jpg" alt="Анна">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/anna/100x100/2.jpg" alt="Анна">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/anna/100x100/3.jpg" alt="Анна">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/anna/100x100/4.jpg" alt="Анна">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/anna/100x100/5.jpg" alt="Анна">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/anna/100x100/6.jpg" alt="Анна">
+        </div>
+      </div>
+    </article>
+
+    <article class="expert" id="tab-2">
+      <div class="expert__inner">
+
+        <div class="expert__img-box carousel w-10/12 max-w-5xl mx-auto" id="mainCarousel-varvara">
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/varvara/900x600/1.jpg"
+            data-fancybox="gallery-varvara">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/varvara/600x400/1.jpg"
+              alt="Варвара">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/varvara/900x600/2.jpg"
+            data-fancybox="gallery-varvara">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/varvara/600x400/2.jpg"
+              alt="Варвара">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/varvara/900x600/3.jpg"
+            data-fancybox="gallery-varvara">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/varvara/600x400/3.jpg"
+              alt="Варвара">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/varvara/900x600/4.jpg"
+            data-fancybox="gallery-varvara">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/varvara/600x400/4.jpg"
+              alt="Варвара">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/varvara/900x600/5.jpg"
+            data-fancybox="gallery-varvara">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/varvara/600x400/5.jpg"
+              alt="Варвара">
+          </div>
+          <div class="expert__img-slide carousel__slide" data-src="../../../images/expert/varvara/900x600/6.jpg"
+            data-fancybox="gallery-varvara">
+            <img class="expert__img" width="533" height="457" src="../../../images/expert/varvara/600x400/6.jpg"
+              alt="Варвара">
+          </div>
+        </div>
+
+        <div class="expert__info">
+          <div class="expert__name">
+            <p>
+              Варвара
+            </p>
+          </div>
+          <div class="expert__tel">
+            <a href="tel:+79543528892">
+              +7 (954) 352-88-92
+            </a>
+          </div>
+          <div class="expert__address">
+            <p>
+              Северный район, ЖК Олимпийский и Московский проспект.
+            </p>
+          </div>
+          <div class="expert__resume">
+            <p>
+              <span>
+                О себе:
+              </span>
+              26 лет, коренная жительница Воронежа, образование высшее юридическое, на данный момент
+              безработная.
+              В наличии 2 своих собаки (овчарка и такса).
+              С овчаркой активно занимаюсь дрессировкой: фризби, фризби-фристайлом, аджилити, пастьбой.
+            </p>
+          </div>
+          <button class="expert__btn btn">
+            Забронировать
+            <svg class="expert__btn-img">
+              <use href="../../../images/sprite.svg#application--arrow">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="expert__thumb carousel max-w-xl mx-auto" id="thumbCarousel-varvara">
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/varvara/100x100/1.jpg" alt="Варвара">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/varvara/100x100/2.jpg" alt="Варвара">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/varvara/100x100/3.jpg" alt="Варвара">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/varvara/100x100/4.jpg" alt="Варвара">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/varvara/100x100/5.jpg" alt="Варвара">
+        </div>
+        <div class="expert__thumb-slide carousel__slide">
+          <img class="expert__thumb-img" src="../../../images/expert/varvara/100x100/6.jpg" alt="Варвара">
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="price">
+
+  <div class="container">
+    
+    <h2 class="price__title title">
+      Цены
+    </h2>
+    <div class="price__content">
+      <div class="price__content-border">
+        <h3 class="price__content-title">
+          Выберите желаемое количество услуг
+        </h3>
+        <div class="price__inner">
+          <form class="price__chekbox-form" action="#">
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox" checked>
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Выгул в свободном темпе
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Выгул активный, игра с собакой
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Выгул с элементами дрессуры
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox" checked>
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Мытьё лап после выгула
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Кормление сухим кормом
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Отвезти к ветиринару (60 минут)
+              </span>
+            </label>
+            <label class="price__chekbox-label">
+              <input class="price__chekbox-input" type="checkbox">
+              <span class="price__chekbox"></span>
+              <span class="price__chekbox-text">
+                Фото и видео отчёт
+              </span>
+            </label>
+          </form>
+
+          <div class="price__total">
+            <div class="price__total-prompt">
+              <span class="price__total-text">
+                Количество выгулов:
+              </span>
+              <span class="price__total-icon"
+                data-tooltip="Количество выгулов будет привязано к вашему номеру телефона">
+                i
+              </span>
+            </div>
+            <input class="price__total-amount" type="number" min="1" max="100" value="1">
+            <div class="price__total-expert">
+              <span class="price__total-span">Выгульщик</span>
+              <form class="price__total-form" action="#">
+                <label class="price__total-label">
+                  <select class="price__total-select" name="expert">
+                    <option value="every">Любой</option>
+                    <option value="anna">Анна</option>
+                    <option value="varvara">Варвара</option>
+                    <option value="rustam">Рустам</option>
+                    <option value="anastasia">Анастасия</option>
+                  </select>
+                </label>
+              </form>
+            </div>
+            <div class="price__total-wrapper">
+              <span class="price__total-number">
+                Итого: <span>250 ₽</span>
+              </span>
+              <button class="price__total-btn btn" type="submit">
+                Заказать услугу
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+
+  <div class="container">
+    
+    <h2 class="reviews__title title">
+      теплые слова клиентов
+    </h2>
+
+    <ul class="reviews__slider">
+      <li class="reviews__slide">
+        <span>
+          Рамиль
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          О сервисе могу сказать только положительное. Ребята делают все четко по времени, специалисты с хорошей
+          подготовкой, с
+          вариантами выбора выгульщика. Сервис мне очень нравится. Могу рекомендовать.
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Валентина
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          Замечательный сервис, очень выручает! Ребята, которым не страшно доверить любимого песика, всё очень
+          пунктуально,
+          ответственно. После каждой порогулки фоторепортаж и карта маршрута. С нами работает Анна, она как добрая фея,
+          и погуляет
+          и лапки помоет)) Когда он с ней я абсоюдно спокойна! Спасибо!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Ольга
+        </span>
+        <div class="reviews__star" data-rateyo-rating="4"></div>
+        <p>
+          Очень удобный сервис для людей, любящих своих питомцев, у которых не всегда есть время на длительные прогулки)
+          спасибо
+          вам! Дик очень полюбил свою выгульщицу Варвару, ждёт её с нетерпением. Добавте больше опций и я навсегда с
+          вами!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Рамиль
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          О сервисе могу сказать только положительное. Ребята делают все четко по времени, специалисты с хорошей
+          подготовкой, с
+          вариантами выбора выгульщика. Сервис мне очень нравится. Могу рекомендовать.
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Валентина
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          Замечательный сервис, очень выручает! Ребята, которым не страшно доверить любимого песика, всё очень
+          пунктуально,
+          ответственно. После каждой порогулки фоторепортаж и карта маршрута. С нами работает Анна, она как добрая фея,
+          и погуляет
+          и лапки помоет)) Когда он с ней я абсоюдно спокойна! Спасибо!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Ольга
+        </span>
+        <div class="reviews__star" data-rateyo-rating="4"></div>
+        <p>
+          Очень удобный сервис для людей, любящих своих питомцев, у которых не всегда есть время на длительные прогулки)
+          спасибо
+          вам! Дик очень полюбил свою выгульщицу Варвару, ждёт её с нетерпением. Добавте больше опций и я навсегда с
+          вами!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Рамиль
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          О сервисе могу сказать только положительное. Ребята делают все четко по времени, специалисты с хорошей
+          подготовкой, с
+          вариантами выбора выгульщика. Сервис мне очень нравится. Могу рекомендовать.
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Валентина
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          Замечательный сервис, очень выручает! Ребята, которым не страшно доверить любимого песика, всё очень
+          пунктуально,
+          ответственно. После каждой порогулки фоторепортаж и карта маршрута. С нами работает Анна, она как добрая фея,
+          и погуляет
+          и лапки помоет)) Когда он с ней я абсоюдно спокойна! Спасибо!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Ольга
+        </span>
+        <div class="reviews__star" data-rateyo-rating="4"></div>
+        <p>
+          Очень удобный сервис для людей, любящих своих питомцев, у которых не всегда есть время на длительные прогулки)
+          спасибо
+          вам! Дик очень полюбил свою выгульщицу Варвару, ждёт её с нетерпением. Добавте больше опций и я навсегда с
+          вами!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Рамиль
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          О сервисе могу сказать только положительное. Ребята делают все четко по времени, специалисты с хорошей
+          подготовкой, с
+          вариантами выбора выгульщика. Сервис мне очень нравится. Могу рекомендовать.
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Валентина
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          Замечательный сервис, очень выручает! Ребята, которым не страшно доверить любимого песика, всё очень
+          пунктуально,
+          ответственно. После каждой порогулки фоторепортаж и карта маршрута. С нами работает Анна, она как добрая фея,
+          и погуляет
+          и лапки помоет)) Когда он с ней я абсоюдно спокойна! Спасибо!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Ольга
+        </span>
+        <div class="reviews__star" data-rateyo-rating="4"></div>
+        <p>
+          Очень удобный сервис для людей, любящих своих питомцев, у которых не всегда есть время на длительные прогулки)
+          спасибо
+          вам! Дик очень полюбил свою выгульщицу Варвару, ждёт её с нетерпением. Добавте больше опций и я навсегда с
+          вами!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Рамиль
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          О сервисе могу сказать только положительное. Ребята делают все четко по времени, специалисты с хорошей
+          подготовкой, с
+          вариантами выбора выгульщика. Сервис мне очень нравится. Могу рекомендовать.
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Валентина
+        </span>
+        <div class="reviews__star" data-rateyo-rating="5"></div>
+        <p>
+          Замечательный сервис, очень выручает! Ребята, которым не страшно доверить любимого песика, всё очень
+          пунктуально,
+          ответственно. После каждой порогулки фоторепортаж и карта маршрута. С нами работает Анна, она как добрая фея,
+          и погуляет
+          и лапки помоет)) Когда он с ней я абсоюдно спокойна! Спасибо!
+        </p>
+      </li>
+      <li class="reviews__slide">
+        <span>
+          Ольга
+        </span>
+        <div class="reviews__star" data-rateyo-rating="4"></div>
+        <p>
+          Очень удобный сервис для людей, любящих своих питомцев, у которых не всегда есть время на длительные прогулки)
+          спасибо
+          вам! Дик очень полюбил свою выгульщицу Варвару, ждёт её с нетерпением. Добавте больше опций и я навсегда с
+          вами!
+        </p>
+      </li>
+    </ul>
+
+    <button class="reviews__btn">
+      Оставить свой отзыв
+    </button>
+
+  </div>
+</section>
+
+<section class="connection">
+
+  <div class="container">
+
+    <form class="connection__form" action="#">
+      <div class="connection__label">
+        <div class="connection__decor"></div>
+        <h2 class="connection__title title">
+          У вас остались вопросы?
+        </h2>
+        <h3 class="connection__subtitle">
+          Напишите нам и администратор перезвонит вам в течении 3 минут:
+        </h3>
+        <span class="connection__text">
+          Ваш вопрос:
+        </span>
+        <input class="connection__input-question" type="text">
+        <span class="connection__text">
+          Ваш телефон:
+        </span>
+        <div class="connection__inner">
+          <input class="connection__input-tel" type="text" placeholder="+7 (___) ___-__-__">
+          <button class="connection__btn btn">
+            Отправить
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
 
-  <div class="footer__bottom">
-    © 2021 Simple Food
+  <div class="container">
+    <div class="footer__bottom">
+      <a class="logo footer__logo" href="index.html">
+        <svg class="logo">
+          <use href="../../images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="footer__link-box">
+        <ul class="footer__link-items">
+          <li class="footer__link-item">
+            <a class="footer__link wrapper-click status" href="#">
+              Услуги
+            </a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link" href="#">
+              Цены
+            </a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link wrapper-click status" href="#">
+              Отзывы
+            </a>
+          </li>
+          <li class="footer__link-item">
+            <a class="footer__link wrapper-click status" href="#">
+              Скачать приложение
+            </a>
+          </li>
+        </ul>
+
+        <a class="footer__link-text wrapper-click status" href="#">
+          Политика конфиденциальности
+        </a>
+        <a class="footer__link-text wrapper-click status" href="#">
+          Согласие на обработку персональных данных
+        </a>
+      </div>
+
+      <div class="footer__contacts">
+        <a class="footer__tel status wrapper-click" href="#">
+          +7 (909) 555-36-45
+        </a>
+        <a class="footer__link-form status wrapper-click" href="#connection">
+          Заказать звонок Воронеж
+        </a>
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link status" href="#">
+              <svg class="footer__social-img">
+                <use href="../../images/sprite.svg#footer--vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link status" href="#">
+              <svg class="footer__social-img">
+                <use href="../../images/sprite.svg#footer--telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link status" href="#">
+              <svg class="footer__social-img">
+                <use href="../../images/sprite.svg#footer--whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link status" href="#">
+              <svg class="footer__social-img">
+                <use href="../../images/sprite.svg#footer--instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="footer__mobile">
+        <li class="footer__mobile-item">
+          <a class="footer__mobile-link footer__mobile-link--google" href="#"></a>
+        </li>
+        <li class="footer__mobile-item">
+          <a class="footer__mobile-link footer__mobile-link--app" href="#"></a>
+        </li>
+      </ul>
+
+    </div>
   </div>
 </footer>
-
 <div class="mobile-menu">
   <div class="mobile-menu__content">
+
     <div class="container">
 
       <a class="logo mobile-menu__logo" href="#">
-        <img class="logo__img mobile-menu__logo-img" width="200" height="39" src="images/logo.svg"
+        <img class="logo__img mobile-menu__logo-img" width="121" height="161" src="../../images/sprite.svg#logo"
           alt="Логотип сайта">
       </a>
 
@@ -73,24 +865,39 @@
    <span class="sr-only">Открыть меню</span>
  </button>
  
+
       <ul class="mobile-menu__items">
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link mobile-menu__link--active status  wrapper-click" href="#header">
-            Главная
+          <a class="mobile-menu__link mobile-menu__link--active status  wrapper-click" href="#catalog">
+            Products
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#categories">
-            Блюда
+          <a class="mobile-menu__link status wrapper-click" href="#catalog-reviews">
+            Who we are
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#contacts">
-            Контакты
+          <a class="mobile-menu__link status wrapper-click" href="#concept">
+            Concept Store
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#recipes">
+            Recipes
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#">
+            Log In
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link status wrapper-click" href="#">
+            Cart (0)
           </a>
         </li>
       </ul>
-
     </div>
   </div>
 </div>
