@@ -1,0 +1,99 @@
+.application {
+  padding: 63px 0 74px 0;
+  margin-bottom: 108px;
+  background-color: $accent;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: -o-radial-gradient(68.06% 34.17%, 22.5% 22.5%, #ffe057 0%, #fdd74e 66.67%, #fbce45 100%);
+    background: radial-gradient(22.5% 22.5% at 68.06% 34.17%, #ffe057 0%, #fdd74e 66.67%, #fbce45 100%);
+    box-shadow: -10px 40px 50px rgb(203 156 1 / 50%);
+    right: 66px;
+    bottom: -75px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+  }
+
+  &__title.title {
+    text-transform: none;
+    font-weight: 900;
+    text-align-last: left;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 545px;
+    margin-bottom: 45px;
+  }
+
+  &__phone {
+    border: 1px solid #64605bb3;
+    border-radius: 27px;
+    padding: 11px 56px;
+    text-align: center;
+    background-color: $accent;
+    margin-right: 30px;
+
+    &:focus {
+      outline: transparent;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 11px 92px 11px 51px;
+    background-color: $white;
+    box-shadow: 0px 4px 15px rgba(222, 177, 41, 0.8);
+    border-radius: 27px;
+    transition: color 0.3s,
+      background-color 0.3s,
+      box-shadow 0.3s;
+
+    &:hover {
+      color: white;
+      background-color: $black;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      box-shadow: 0px 4px 15px rgba(15, 12, 4, 0.8);
+    }
+  }
+
+  &__btn-img {
+    width: 21px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(22px, -50%);
+    fill: $basic;
+    transition: fill 0.3s;
+  }
+
+  &__img {
+    background-image: url('../../../images/application-bg.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 746px;
+    height: 428px;
+    position: absolute;
+    right: -262px;
+    top: -104px;
+  }
+}

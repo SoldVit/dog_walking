@@ -1,0 +1,129 @@
+.hero {
+  margin-bottom: 120px;
+  background-image: url('../../../images/hero-bg.png');
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__content {
+    padding-top: 200px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 48px;
+    color: $black;
+    margin-bottom: 20px;
+    line-height: 60px;
+  }
+
+  &__subtitle {
+    max-width: 433px;
+    font-size: 24px;
+    color: $black;
+    margin-bottom: 40px;
+    @include text-shorten(3);
+  }
+
+  &__link-box {
+    margin-bottom: 76px;
+  }
+
+  &__btn {
+    margin-right: 30px;
+  }
+
+  &__link {
+    font-size: 16px;
+    padding-left: 34px;
+    position: relative;
+    color: $black;
+
+    &::before {
+      @include pseudo;
+      width: 33px;
+      height: 33px;
+      left: 2px;
+      top: -7px;
+      background-image: url('../../../images/icons/hero/download.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 103px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 41px;
+    }
+  }
+
+  &__item-link {
+    display: block;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: 50%;
+      transform: translate(-50%, -70px);
+    }
+
+    &--equipment {
+      max-width: 100px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        background-image: url('../../../images/icons/hero/gps.svg');
+      }
+    }
+
+    &--games {
+      max-width: 87px;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+        background-image: url('../../../images/icons/hero/ball.svg');
+        transform: translate(-50%, -60px);
+      }
+    }
+
+    &--reports {
+      max-width: 106px;
+
+      &::before {
+        width: 38px;
+        height: 60px;
+        background-image: url('../../../images/icons/hero/tel.svg');
+      }
+    }
+
+    &--food {
+      max-width: 78px;
+
+      &::before {
+        width: 65px;
+        height: 42px;
+        background-image: url('../../../images/icons/hero/bowl.svg');
+        transform: translate(-50%, -57px);
+      }
+    }
+  }
+}

@@ -1,15 +1,91 @@
 .footer {
+  padding-bottom: 15px;
 
   &__bottom {
-    padding: 19px 0;
-    margin: 0 auto;
-    border-top: 1px solid rgba(194, 194, 194, 0.2);
-    text-align: center;
-    font-size: 14px;
-    line-height: 1;
+    display: flex;
+  }
 
-    @include max-w($xs) {
-      padding: 26px 0;
+  &__logo.logo {
+    margin-right: 65px;
+  }
+
+  &__link-box {
+    margin-right: 59px;
+    font-size: 16px;
+  }
+
+  &__link-items {
+    display: flex;
+    color: $black;
+    margin-bottom: 35px;
+  }
+
+  &__link-item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link-text {
+    display: block;
+    color: #b1afad;
+  }
+
+  &__contacts {
+    margin-right: 116px;
+  }
+
+  &__tel {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  &__link-form {
+    text-decoration: underline;
+    font-size: 11px;
+    margin-bottom: 44px;
+    display: block;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-img {
+    width: 20px;
+    height: 20px;
+    fill: $basic;
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $accent
+    }
+  }
+
+  &__mobile {
+    margin-top: -23px;
+  }
+
+  &__mobile-link {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+
+    &--google {
+      background-image: url('../../images/footer/google-play.png');
+      width: 227px;
+      height: 88px;
+    }
+
+    &--app {
+      background-image: url('../../images/footer/app-store.png');
+      width: 198px;
+      height: 66px;
+      margin-left: 15px;
     }
   }
 }

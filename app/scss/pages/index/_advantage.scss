@@ -1,0 +1,123 @@
+.advantage {
+  padding-bottom: 180px;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 268px;
+    height: 810px;
+    background-image: url('../../../images/advantage-decor.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    left: 0;
+    top: -350px;
+    z-index: -1;
+  }
+
+  &__title {
+    margin-bottom: 176px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+
+    &--left {
+      align-items: flex-start;
+    }
+
+    &--right {
+      align-items: flex-end;
+    }
+  }
+
+  &__item {
+    font-family: roboto, sans-serif;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 122px;
+    }
+
+    &::before {
+      @include pseudo;
+      background-image: url('../../../images/icons/advantage/paw.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 100px;
+      height: 100px;
+      top: -15px;
+      z-index: 1;
+    }
+
+    &:nth-child(1)::before,
+    &:nth-child(3)::before {
+      left: 298px;
+      top: -15px;
+    }
+
+    &:nth-child(2)::before {
+      left: 248px;
+      top: -15px;
+    }
+
+    &--left {
+      text-align: right;
+
+      &:nth-child(1) {
+        padding-left: 60px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 50px;
+      }
+
+      &:nth-child(3) {
+        padding-left: 100px;
+      }
+    }
+
+    &--right {
+      &:nth-child(1) {
+        padding-right: 120px;
+      }
+
+      &:nth-child(3) {
+        padding-right: 130px;
+
+      }
+
+      &:nth-child(1)::before,
+      &:nth-child(3)::before {
+      left: -96px;
+      }
+
+      &:nth-child(2)::before {
+      left: -79px;
+      }
+    }
+  }
+
+  &__img {
+
+    &::before {
+      @include pseudo;
+      background-image: url('../../../images/advantage-bg.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 600px;
+      height: 639px;
+      left: 50%;
+      transform: translate(-50%, -140px);
+    }
+  }
+}

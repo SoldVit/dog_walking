@@ -1,0 +1,270 @@
+.price {
+  margin-bottom: 120px;
+  position: relative;
+  background-image: url("../../../images/footer/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__content {
+    max-width: 904px;
+    margin: 0 auto;
+    background: linear-gradient(216.74deg, #FDFDFD 42.81%, #F8F7F5 100.75%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  &__content-border {
+    border: 2px solid rgba(251, 206, 69, 0.5);
+    padding: 83px 35px 100px 96px;
+  }
+
+  &__content-title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__chekbox-form {
+    margin-right: 76px;
+  }
+
+  &__chekbox-label {
+    display: block;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__chekbox-input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked+.price__chekbox {
+      background-color: $accent;
+
+      &::before {
+        @include pseudo;
+        background-image: url('../../../images/sprite.svg#price--check');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__chekbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $accent;
+  }
+
+  &__chekbox-text {
+    padding-left: 39px;
+  }
+
+  &__total-prompt {
+    margin-bottom: 15px;
+  }
+
+  &__total-text {
+    margin-right: 10px;
+  }
+
+  &__total-icon {
+    font-weight: 700;
+    color: #acc4ca;
+    padding: 2px 10px;
+    border: 1px solid #acc4ca;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &[data-tooltip] {
+      position: relative;
+
+      &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        opacity: 0;
+        border-radius: 3px;
+        box-shadow: 0px 4px 15px rgba(222, 177, 41, 14%);
+        width: 250px;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 12px 14px;
+        top: 35px;
+        left: -37px;
+        text-align: center;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__total-amount {
+    margin-bottom: 22px;
+
+    & .jq-number__field {
+      width: 50px;
+      margin-left: 30px;
+      border: none;
+      border-bottom-color: none;
+      border-radius: 4px;
+      box-shadow: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & .jq-number__field input {
+      width: 100%;
+      padding: 0;
+      font: 13px gilroy, sans-serif;
+      color: $black;
+      font-weight: 500;
+    }
+
+
+
+    & .jq-number__spin {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 32px;
+      height: 14px;
+      border: none;
+      border-bottom-color: none;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      cursor: pointer;
+    }
+
+    & .jq-number__spin.minus::after,
+    & .jq-number__spin.plus::after {
+      content: "-";
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+      color: $accent;
+      font-size: 18px;
+      font-weight: 700;
+      width: 10px;
+      height: 22px;
+      top: -1px;
+      left: -83px;
+    }
+
+    & .jq-number__spin.plus::after {
+      content: '+';
+      top: 0px;
+      left: -28px;
+    }
+  }
+
+  &__total-span {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__total-expert {
+    margin-bottom: 35px;
+  }
+
+  &__total-form {
+    border: 1px solid $accent;
+    border-radius: 3px;
+    position: relative;
+    max-width: 152px;
+
+    & .jq-selectbox__select {
+      height: 26px;
+      line-height: 24px;
+      position: relative;
+      padding: 0 70px 0 15px;
+    }
+
+    & .price__total-form .jq-selectbox__select {
+      padding: 0;
+    }
+
+    & .jq-selectbox__trigger {
+      position: relative;
+    }
+
+    & .jq-selectbox__trigger-arrow {
+      position: absolute;
+      top: 16px;
+      right: 12px;
+      width: 0;
+      height: 0;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+
+      &::before {
+        @include pseudo;
+        width: 8px;
+        height: 15px;
+        background-image: url('../../../images/sprite.svg#price--vector');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 16px;
+        right: -106px;
+        top: -35px;
+      }
+    }
+  }
+
+  & .jq-number.focused .jq-number__field {
+    outline: none;
+    border: none;
+  }
+
+  &__total-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__total-number {
+    margin-right: 42px;
+  }
+
+  &__total-btn.btn {
+    padding: 11px 55px;
+  }
+}
