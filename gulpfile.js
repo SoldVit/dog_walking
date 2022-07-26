@@ -58,8 +58,8 @@ function scripts() {
       'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
       'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
       'node_modules/@fancyapps/ui/dist/carousel.umd.js',
-      'node_modules/rate/v2.3.2/jquery.rateyo.js',
-      'node_modules/slick-1.8.1/slick-1.8.1/slick/slick.js',
+      'app/js/plugins/v2.3.2/jquery.rateyo.min.js',
+      'node_modules/slick-slider/slick/slick.js',
       'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
       'app/js/components/*.js',   
       'app/js/main.js'

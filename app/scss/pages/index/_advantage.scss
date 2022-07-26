@@ -1,6 +1,14 @@
 .advantage {
-  padding-bottom: 180px;
+  margin-bottom: 180px;
   position: relative;
+
+  @include max-w($xl) {
+    margin-bottom: 80px;
+  }
+
+  @include max-w($sm) {
+    margin-bottom: 60px;
+  }
 
   &::before {
     @include pseudo;
@@ -17,24 +25,45 @@
 
   &__title {
     margin-bottom: 176px;
+
+    @include max-w($lg) {
+      margin-bottom: 115px;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 60px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include max-w($sm) {
+      flex-direction: column;
+    }
   }
 
   &__items {
     display: flex;
     flex-direction: column;
     max-width: 330px;
+    z-index: 0;
 
     &--left {
       align-items: flex-start;
+
+      @include max-w($sm) {
+        align-items: flex-start;
+      }
     }
 
     &--right {
       align-items: flex-end;
+
+      @include max-w($sm) {
+        align-items: flex-start;
+      }
     }
   }
 
@@ -42,8 +71,24 @@
     font-family: roboto, sans-serif;
     position: relative;
 
+    @include max-w($xl) {
+      font-size: 14px;
+    }
+
+    @include max-w($sm) {
+      color: $black;
+    }
+
     &:not(:last-child) {
       margin-bottom: 122px;
+
+      @include max-w($sm) {
+        margin-bottom: 25px;
+      }
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 25px;
     }
 
     &::before {
@@ -56,6 +101,10 @@
       height: 100px;
       top: -15px;
       z-index: 1;
+
+      @include max-w($lg) {
+        display: none;
+      }
     }
 
     &:nth-child(1)::before,
@@ -72,36 +121,60 @@
     &--left {
       text-align: right;
 
+      @include max-w($sm) {
+        text-align: left;
+      }
+
       &:nth-child(1) {
         padding-left: 60px;
+
+        @include max-w($sm) {
+          padding-left: 0;
+        }
       }
 
       &:nth-child(2) {
         padding-left: 50px;
+
+        @include max-w($sm) {
+          padding-left: 0;
+        }
       }
 
       &:nth-child(3) {
         padding-left: 100px;
+
+        @include max-w($sm) {
+          padding-left: 0;
+        }
       }
     }
 
     &--right {
       &:nth-child(1) {
         padding-right: 120px;
+
+        @include max-w($sm) {
+          padding-right: 0;
+        }
       }
 
       &:nth-child(3) {
         padding-right: 130px;
 
+        @include max-w($sm) {
+          padding-right: 0;
+        }
+
       }
 
       &:nth-child(1)::before,
       &:nth-child(3)::before {
-      left: -96px;
+        left: -96px;
       }
 
       &:nth-child(2)::before {
-      left: -79px;
+        left: -79px;
       }
     }
   }
@@ -118,6 +191,19 @@
       height: 639px;
       left: 50%;
       transform: translate(-50%, -140px);
+      z-index: -1;
+
+      @include max-w($xxl) {
+        width: 458px;
+      }
+
+      @include max-w($xl) {
+        width: 288px;
+      }
+
+      @include max-w($sm) {
+        transform: translate(-50%, -320px);
+      }
     }
   }
 }

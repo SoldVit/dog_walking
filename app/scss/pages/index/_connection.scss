@@ -1,27 +1,44 @@
 .connection {
   margin-bottom: 140px;
-  background-image: url('../../../images/connection-bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
   height: 736px;
+
+  @include max-w($lg) {
+    margin-bottom: 60px;
+  }
 
   &__form {
     position: absolute;
     background: linear-gradient(216.74deg, #FDFDFD 42.81%, #F8F7F5 100.75%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    padding: 20px;
     max-width: 753px;
     width: 100%;
     top: -80px;
+
+    @include max-w($lg) {
+      top: -19px;
+      left: 15px;
+      margin: 0 -15px;
+    }
   }
 
   &__label {
     padding: 66px 41px 113px 44px;
     display: block;
+    margin: 20px;
     border: 2px solid rgba(251, 206, 69, 0.5);
+
+    @include max-w($lg) {
+      padding: 50px 15px;
+    }
+
+    @include max-w($xs) {
+      padding: 30px 15px;
+    }
   }
 
   &__decor {
@@ -39,6 +56,18 @@
     font-weight: 800;
     max-width: 404px;
     margin: 0 auto 30px auto;
+
+    @include max-w($xl) {
+      font-size: 34px;
+    }
+
+    @include max-w($lg) {
+      font-size: 26px;
+    }
+
+    @include max-w($sm) {
+      font-size: 20px;
+    }
   }
 
   &__subtitle {
@@ -47,6 +76,14 @@
     max-width: 441px;
     font-weight: 500;
     margin: 0 auto 70px auto;
+
+    @include max-w($lg) {
+      font-size: 22px;
+    }
+
+    @include max-w($sm) {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -77,6 +114,12 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include max-w($md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__input-tel {
@@ -88,9 +131,28 @@
       font-weight: 400;
       color: $basic;
     }
+
+    @include max-w($md) {
+      margin-bottom: 15px;
+    }
+
+    @include max-w($xs) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__btn.btn {
     padding: 0 108px;
+    text-align: center;
+
+    @include max-w($md) {
+      padding: 10px 108px;
+    }
+
+    @include max-w($xs) {
+      padding: 10px 0;
+      width: 100%;
+    }
   }
 }

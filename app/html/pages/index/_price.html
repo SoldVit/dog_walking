@@ -1,7 +1,7 @@
 <section class="price">
 
   <div class="container">
-    
+
     <h2 class="price__title title">
       Цены
     </h2>
@@ -13,49 +13,49 @@
         <div class="price__inner">
           <form class="price__chekbox-form" action="#">
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox" checked>
+              <input class="price__chekbox-input" type="checkbox" checked name="Выгул в свободном темпе">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Выгул в свободном темпе
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name=" Выгул активный, игра с собакой">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Выгул активный, игра с собакой
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="  Выгул с элементами дрессуры">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Выгул с элементами дрессуры
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox" checked>
+              <input class="price__chekbox-input" type="checkbox" checked name="Мытьё лап после выгула">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Мытьё лап после выгула
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="Кормление сухим кормом">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Кормление сухим кормом
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="Отвезти к ветиринару (60 минут)">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Отвезти к ветиринару (60 минут)
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="   Фото и видео отчёт">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Фото и видео отчёт
@@ -64,21 +64,21 @@
           </form>
 
           <div class="price__total">
-            <div class="price__total-prompt">
-              <span class="price__total-text">
+            <form class="price__total-prompt" name="Количество выгулов">
+              <label class="price__total-text" for="price__total-amount">
                 Количество выгулов:
-              </span>
+              </label>
               <span class="price__total-icon"
                 data-tooltip="Количество выгулов будет привязано к вашему номеру телефона">
                 i
               </span>
-            </div>
-            <input class="price__total-amount" type="number" min="1" max="100" value="1">
+              <input class="price__total-amount" id="price__total-amount" type="number" min="1" max="100" value="1">
+            </form>
             <div class="price__total-expert">
               <span class="price__total-span">Выгульщик</span>
               <form class="price__total-form" action="#">
                 <label class="price__total-label">
-                  <select class="price__total-select" name="expert">
+                  <select class="price__total-select" name="Специалист">
                     <option value="every">Любой</option>
                     <option value="anna">Анна</option>
                     <option value="varvara">Варвара</option>

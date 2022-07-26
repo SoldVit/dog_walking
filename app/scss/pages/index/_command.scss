@@ -1,7 +1,6 @@
 // Carousel
 #mainCarousel,
-#mainCarousel-varvara
-{
+#mainCarousel-varvara {
   --carousel-button-color: #170724;
   --carousel-button-bg: #fff;
   --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
@@ -12,12 +11,14 @@
   --carousel-button-svg-stroke-width: 2.5;
 }
 
-#mainCarousel .carousel__slide,#mainCarousel-varvara .carousel__slide {
+#mainCarousel .carousel__slide,
+#mainCarousel-varvara .carousel__slide {
   width: 100%;
   padding: 0;
 }
 
-#thumbCarousel .carousel__slide,#thumbCarousel-varvara .carousel__slide {
+#thumbCarousel .carousel__slide,
+#thumbCarousel-varvara .carousel__slide {
   opacity: 0.5;
   padding: 0;
   margin: 0.25rem;
@@ -68,6 +69,14 @@
     box-shadow: -10px 40px 50px rgba(203, 156, 1, 0.5);
     right: 150px;
     bottom: 72px;
+
+    @include max-w($xxl) {
+      bottom: -93px;
+    }
+
+    @include max-w($sm) {
+      display: none;
+    }
   }
 
   &__title {
@@ -80,6 +89,10 @@
     max-width: 730px;
     margin: 0 auto;
     margin-bottom: 50px;
+
+    @include max-w($lg) {
+      font-size: 16px;
+    }
   }
 
   &__link {
@@ -93,11 +106,24 @@
     text-align: center;
     margin: 0 auto;
     margin-bottom: 50px;
+
+    @include max-w($lg) {
+      flex-wrap: wrap;
+    }
+
+    @include max-w($sm) {
+      justify-content: center;
+    }
   }
 
   &__tab {
     max-width: 200px;
     width: 100%;
+    margin-right: 5px;
+
+    @include max-w($lg) {
+      margin-bottom: 15px;
+    }
   }
 
   &__tab-link {
@@ -128,16 +154,27 @@
   &--active {
     display: block;
   }
-  
 
   &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include max-w($md) {
+      flex-direction: column;
+    }
   }
 
   &__img-box {
     margin-right: 50px;
+
+    @include max-w($lg) {
+      margin-right: 10px;
+    }
+
+    @include max-w($md) {
+      margin-bottom: 5px;
+    }
   }
 
   &__img {
@@ -168,6 +205,11 @@
   &__resume {
     margin-bottom: 45px;
 
+    @include max-w($md) {
+      margin-bottom: 0;
+    }
+
+
     span {
       font-weight: 700;
     }
@@ -181,6 +223,11 @@
       svg {
         fill: $accent;
       }
+    }
+
+    @include max-w($md) {
+      position: absolute;
+      bottom: -67px;
     }
   }
 
@@ -196,5 +243,10 @@
 
   &__thumb {
     transform: translate(-35px, 0);
+
+    @include max-w($lg) {
+      transform: translate(0px, 0);
+      overflow: auto;
+    }
   }
 }

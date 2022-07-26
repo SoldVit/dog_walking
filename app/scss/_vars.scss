@@ -1,13 +1,14 @@
-$black: #2B2A29;
+$black:  #2B2A29;
 $accent: #fbce45;
-$white: #ffff;
-$basic: #64605B;
+$white:  #ffff;
+$basic:  #64605B;
 
-$xl: 1024px;
-$lg: 900px;
-$md: 767px;
-$sm: 640px;
-$xs: 440px;
+$xxl: 1250px;
+$xl:  1024px;
+$lg:  900px;
+$md:  767px;
+$sm:  640px;
+$xs:  440px;
 
 @mixin max-w($width) {
   @media (max-width: $width) {
