@@ -2,29 +2,61 @@
   margin-bottom: 120px;
   color: $black;
 
+  @include max-w($lg) {
+    margin-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 70px;
+
+    @include max-w($lg) {
+      margin-bottom: 40px;
+    }
   }
 
   &__slider {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 88px;
+    margin: 0 auto 88px auto;
+    max-width: 1000px;
+
+    @include max-w($sm) {
+      margin: 0 auto 20px auto;
+    }
   }
 
   &__slide {
     max-width: 311px;
+    padding: 0 10px;
+
+    @include text-shorten(10);
+
+    @include max-w($xxl) {
+      display: block !important;
+      margin: 0 auto;
+    }
 
     span {
       font-size: 28px;
       font-weight: 900;
       margin-bottom: 10px;
 
+      @include max-w($lg) {
+        font-size: 22px;
+      }
+
+      @include max-w($sm) {
+        font-size: 20px;
+      }
     }
 
     p {
       @include text-shorten(10);
       font-size: 18px;
+
+      @include max-w($lg) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -95,6 +127,11 @@
       border-radius: 50%;
       top: 50%;
       transform: translateY(-160%);
+
+      @include max-w($xxl) {
+        transform: translateY(300%);
+        right: 365px;
+      }
     }
 
     &::after {
@@ -107,6 +144,11 @@
       top: 40%;
       left: 27px;
       transform: translateY(-160%);
+
+      @include max-w($xxl) {
+        transform: translateY(855%);
+        left: -402px;
+      }
     }
   }
 
@@ -120,12 +162,21 @@
   & .slick-prev.slick-arrow {
 
     &::before {
-      left: -115px;
+      left: -80px;
+
+      @include max-w($xxl) {
+        left: 365px;
+      }
     }
 
     &::after {
       background-image: url('../../../images/icons/reviews/arrow-left.svg');
-      left: -94px;
+      left: -59px;
+
+      @include max-w($xxl) {
+        transform: translateY(855%);
+        left: 387px;
+      }
     }
   }
 }

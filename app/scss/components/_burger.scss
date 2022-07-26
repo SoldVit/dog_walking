@@ -1,240 +1,388 @@
-.burger {
+.burger-checkbox {
+  display: none;
+
+
+  // &:checked~.burger-bg {
+  //   transform: scale(80);
+  // }
+
+  // &:checked+.burger-btn .burger-btn__icon {
+  //   background-color: transparent;
+  // }
+
+  // &:checked+.burger-btn .burger-btn__icon::before {
+  //   top: 0;
+  //   transform: rotate(135deg);
+  // }
+
+  // &:checked+.burger-btn .burger-btn__icon::after {
+  //   bottom: 0;
+  //   transform: rotate(-135deg);
+  // }
+}
+
+.burger-btn {
+  text-align: center;
+  right: 10px;
+  z-index: 2000;
+  position: fixed;
+  background-color: $white;
   width: 44px;
   height: 44px;
-  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 1rem 3rem black;
+  cursor: pointer;
   display: none;
-  padding: 12px 6px;
-  outline: transparent;
-  margin-left: auto;
 
   @include max-w($lg) {
     display: block;
-    position: fixed;
-    right: 0;
   }
 
-  &__line {
-    display: none;
-    height: 2px;
-    width: 28px;
-    background-color: $black;
-
-    @include max-w($lg) {
-      display: block;
-    }
-
-    &::after,
-    &::before {
-      @include pseudo;
-      width: 28px;
-      height: 2px;
-      background-color: $black;
-      left: 1px;
-    }
+  &--active {
+    background-color: transparent;
 
     &::before {
-      transform: translate(5px, -8px);
-      animation-name: burger-before--line;
-      animation-fill-mode: both;
-      animation-duration: 1s;
-
-      @keyframes burger-before--line {
-
-        from {
-          transform: translate(5px, -8px) rotate(180deg) scale(1);
-        }
-
-        50% {
-          transform: scale(1.5);
-        }
-
-        to {
-          transform: translate(5px, -8px) rotate(0) scale(1);
-        }
-      }
+      top: 0;
+      transform: rotate(135deg);
     }
 
     &::after {
-      transform: translate(5px, 8px);
-      animation-name: burger-after--after;
-      animation-fill-mode: both;
-      animation-duration: 1s;
-
-      @keyframes burger-after--after {
-
-        from {
-          transform: translate(5px, 8px) rotate(180deg) scale(1);
-        }
-
-        50% {
-          transform: scale(1.5);
-        }
-
-        to {
-          transform: translate(5px, 8px) rotate(0) scale(1);
-        }
-      }
+      bottom: 0;
+      transform: rotate(-135deg);
     }
+  }
+
+  &__icon,
+  &__icon::before,
+  &__icon::after {
+    width: 28px;
+    height: 2px;
+    background-color: $black;
+    display: inline-block;
+  }
+
+  &__icon::before,
+  &__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &__icon::before {
+    top: 10px;
+  }
+
+  &__icon::after {
+    bottom: 10px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     &--active {
-
-      &::before {
-        animation-name: burger-before;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-before {
-
-          from {
-            transform: translate(5px, -8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, -8px) rotate(0);
-          }
-        }
-      }
-
-      &::after {
-        animation-name: burger-after;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-after {
-
-          from {
-            transform: translate(5px, 8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, 8px) rotate(0);
-          }
-        }
-      }
-    }
-  }
-
-  &--close {
-
-    .burger__line--active {
       background-color: transparent;
 
       &::before {
-        top: 22px;
-        animation-name: burger-before__close;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-before__close {
-
-          from {
-            transform: translate(5px, -8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, 8px) rotate(-45deg);
-          }
-        }
+        top: 0;
+        transform: rotate(135deg);
       }
 
       &::after {
-        top: 22px;
-        animation-name: burger-after__close;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-after__close {
-
-          from {
-            transform: translate(5px, 8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, 8px) rotate(45deg);
-          }
-        }
-      }
-    }
-  }
-
-  &--scroll {
-
-    .burger__line {
-
-      &::before {
-        animation-name: burger-before;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-before {
-
-          from {
-            transform: translate(5px, -8px) rotate(-180deg);
-
-          }
-
-          to {
-            transform: translate(5px, -8px) rotate(0);
-          }
-        }
-      }
-
-      &::after {
-        animation-name: burger-after;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-after {
-
-          from {
-            transform: translate(5px, 8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, 8px) rotate(0);
-          }
-        }
-      }
-    }
-
-    .burger__line--active {
-      background-color: transparent;
-
-      &::before {
-        top: 22px;
-        animation-name: burger-before__close;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-before__close {
-
-          from {
-            transform: translate(5px, -8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, 8px) rotate(-45deg);
-          }
-        }
-      }
-
-      &::after {
-        top: 22px;
-        animation-name: burger-after__close;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-
-        @keyframes burger-after__close {
-
-          from {
-            transform: translate(5px, 8px) rotate(-180deg);
-          }
-
-          to {
-            transform: translate(5px, 8px) rotate(45deg);
-          }
-        }
+        bottom: 0;
+        transform: rotate(-135deg);
       }
     }
   }
 }
+
+.burger-bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  background-image: radial-gradient(circle at -4.17% 4.55%, #ffff51 0, #ffe848 16.67%, #ffcf42 33.33%, #f2b53c 50%, #e09c38 66.67%, #d08635 83.33%, #c17334 100%);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  z-index: 1000;
+  display: none;
+
+  @include max-w($lg) {
+    display: block;
+  }
+
+  &--active {
+    transform: scale(80);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .burger {
+//   width: 44px;
+//   height: 44px;
+//   position: relative;
+//   display: none;
+//   padding: 12px 6px;
+//   outline: transparent;
+//   margin-left: auto;
+
+//   @include max-w($lg) {
+//     display: block;
+//     position: fixed;
+//     right: 0;
+//   }
+
+//   &__line {
+//     display: none;
+//     height: 2px;
+//     width: 28px;
+//     background-color: $black;
+
+//     @include max-w($lg) {
+//       display: block;
+//     }
+
+//     &::after,
+//     &::before {
+//       @include pseudo;
+//       width: 28px;
+//       height: 2px;
+//       background-color: $black;
+//       left: 1px;
+//     }
+
+//     &::before {
+//       transform: translate(5px, -8px);
+//       animation-name: burger-before--line;
+//       animation-fill-mode: both;
+//       animation-duration: 1s;
+
+//       @keyframes burger-before--line {
+
+//         from {
+//           transform: translate(5px, -8px) rotate(180deg) scale(1);
+//         }
+
+//         50% {
+//           transform: scale(1.5);
+//         }
+
+//         to {
+//           transform: translate(5px, -8px) rotate(0) scale(1);
+//         }
+//       }
+//     }
+
+//     &::after {
+//       transform: translate(5px, 8px);
+//       animation-name: burger-after--after;
+//       animation-fill-mode: both;
+//       animation-duration: 1s;
+
+//       @keyframes burger-after--after {
+
+//         from {
+//           transform: translate(5px, 8px) rotate(180deg) scale(1);
+//         }
+
+//         50% {
+//           transform: scale(1.5);
+//         }
+
+//         to {
+//           transform: translate(5px, 8px) rotate(0) scale(1);
+//         }
+//       }
+//     }
+
+//     &--active {
+
+//       &::before {
+//         animation-name: burger-before;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-before {
+
+//           from {
+//             transform: translate(5px, -8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, -8px) rotate(0);
+//           }
+//         }
+//       }
+
+//       &::after {
+//         animation-name: burger-after;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-after {
+
+//           from {
+//             transform: translate(5px, 8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, 8px) rotate(0);
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &--close {
+
+//     .burger__line--active {
+//       background-color: transparent;
+
+//       &::before {
+//         top: 22px;
+//         animation-name: burger-before__close;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-before__close {
+
+//           from {
+//             transform: translate(5px, -8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, 8px) rotate(-45deg);
+//           }
+//         }
+//       }
+
+//       &::after {
+//         top: 22px;
+//         animation-name: burger-after__close;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-after__close {
+
+//           from {
+//             transform: translate(5px, 8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, 8px) rotate(45deg);
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &--scroll {
+
+//     .burger__line {
+
+//       &::before {
+//         animation-name: burger-before;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-before {
+
+//           from {
+//             transform: translate(5px, -8px) rotate(-180deg);
+
+//           }
+
+//           to {
+//             transform: translate(5px, -8px) rotate(0);
+//           }
+//         }
+//       }
+
+//       &::after {
+//         animation-name: burger-after;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-after {
+
+//           from {
+//             transform: translate(5px, 8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, 8px) rotate(0);
+//           }
+//         }
+//       }
+//     }
+
+//     .burger__line--active {
+//       background-color: transparent;
+
+//       &::before {
+//         top: 22px;
+//         animation-name: burger-before__close;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-before__close {
+
+//           from {
+//             transform: translate(5px, -8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, 8px) rotate(-45deg);
+//           }
+//         }
+//       }
+
+//       &::after {
+//         top: 22px;
+//         animation-name: burger-after__close;
+//         animation-fill-mode: both;
+//         animation-duration: 1s;
+
+//         @keyframes burger-after__close {
+
+//           from {
+//             transform: translate(5px, 8px) rotate(-180deg);
+//           }
+
+//           to {
+//             transform: translate(5px, 8px) rotate(45deg);
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &.burger--close {
+//     right: 71px;
+//     top: -90px;
+//   }
+// }

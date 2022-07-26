@@ -6,8 +6,20 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include max-w($sm) {
+    margin-bottom: 50px;
+  }
+
   &__title {
     margin-bottom: 90px;
+
+    @include max-w($lg) {
+      margin-bottom: 50px;
+    }
+
+    @include max-w($sm) {
+      margin-bottom: 20px;
+    }
   }
 
   &__content {
@@ -25,6 +37,14 @@
   &__content-border {
     border: 2px solid rgba(251, 206, 69, 0.5);
     padding: 83px 35px 100px 96px;
+
+    @include max-w($xl) {
+      padding: 52px 20px 51px 20px;
+    }
+
+    @include max-w($sm) {
+      padding: 30px 20px 30px 20px;
+    }
   }
 
   &__content-title {
@@ -34,14 +54,36 @@
     margin-bottom: 60px;
     color: $black;
     text-transform: uppercase;
+
+    @include max-w($lg) {
+      font-size: 20px;
+    }
+
+    @include max-w($sm) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
   }
 
   &__inner {
     display: flex;
+
+    @include max-w($lg) {
+      flex-direction: column;
+    }
   }
 
   &__chekbox-form {
     margin-right: 76px;
+
+    @include max-w($lg) {
+      margin-bottom: 15px;
+    }
+
+    @include max-w($sm) {
+      margin-right: 0;
+    }
   }
 
   &__chekbox-label {
@@ -94,7 +136,9 @@
   }
 
   &__total-text {
+    display: inline-block;
     margin-right: 10px;
+    margin-bottom: 15px;
   }
 
   &__total-icon {
@@ -123,6 +167,10 @@
         text-align: center;
         cursor: pointer;
         transition: 1s;
+
+        @include max-w($sm) {
+          left: -200px;
+        }
       }
 
       &:hover::after {
@@ -133,6 +181,11 @@
 
   &__total-amount {
     margin-bottom: 22px;
+    display: block;
+
+    @include max-w($lg) {
+      margin-bottom: 10px;
+    }
 
     & .jq-number__field {
       width: 50px;
@@ -154,8 +207,6 @@
       color: $black;
       font-weight: 500;
     }
-
-
 
     & .jq-number__spin {
       position: absolute;
@@ -183,14 +234,14 @@
       font-weight: 700;
       width: 10px;
       height: 22px;
-      top: -1px;
-      left: -83px;
+      top: -6px;
+      left: -327px;
     }
 
     & .jq-number__spin.plus::after {
       content: '+';
-      top: 0px;
-      left: -28px;
+      top: -5px;
+      left: -284px;
     }
   }
 
@@ -201,6 +252,10 @@
 
   &__total-expert {
     margin-bottom: 35px;
+
+    @include max-w($lg) {
+      margin-bottom: 15px;
+    }
   }
 
   &__total-form {
@@ -208,6 +263,7 @@
     border-radius: 3px;
     position: relative;
     max-width: 152px;
+    z-index: 0;
 
     & .jq-selectbox__select {
       height: 26px;
@@ -258,10 +314,18 @@
   &__total-wrapper {
     display: flex;
     align-items: center;
+
+    @include max-w($sm) {
+      flex-direction: column;
+    }
   }
 
   &__total-number {
     margin-right: 42px;
+
+    @include max-w($sm) {
+      margin-right: 0;
+    }
   }
 
   &__total-btn.btn {

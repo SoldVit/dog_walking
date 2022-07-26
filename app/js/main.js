@@ -12,8 +12,9 @@ $(function () {
   $("body").keyup((e) => {
     if (e.keyCode === 27) {
       $('.mobile-menu').removeClass('mobile-menu--active');
-      $('.overlay').removeClass('overlay--active');
-      $('.burger__line').removeClass('burger__line--active');
+      $('.burger-btn').removeClass('burger-btn--active');
+      $('.burger-btn__icon').removeClass('burger-btn__icon--active');
+      $('.burger-bg').removeClass('burger-bg--active');
     }
   });
 
@@ -35,7 +36,9 @@ $(function () {
   //  Закрыть мобильное меню по клику на якоря
   $('.mobile-menu__link').on('click', function () {
     $('.mobile-menu').removeClass('mobile-menu--active');
-    $('.overlay').removeClass('overlay--active');
+    $('.burger-btn').removeClass('burger-btn--active');
+    $('.burger-btn__icon').removeClass('burger-btn__icon--active');
+    $('.burger-bg').removeClass('burger-bg--active');
   });
 
   // // Тач для меню
@@ -165,8 +168,33 @@ $(function () {
     slidesToShow: 3,
     dots: true,
     slidesToScroll: 3,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
+
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToScroll: 2,
+          slidesToShow: 2,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false
+        }
+      }
+    ]
   });
 
   // Звезды на отзывы

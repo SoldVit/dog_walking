@@ -1,8 +1,9 @@
 .application {
-  padding: 63px 0 74px 0;
+  padding: 52px 0 46px 0;
   margin-bottom: 108px;
   background-color: $accent;
   position: relative;
+  z-index: -1;
 
   &::before {
     @include pseudo;
@@ -23,12 +24,17 @@
 
   }
 
+  &__content {
+    max-width: 467px;
+  }
+
   &__title.title {
     text-transform: none;
     font-weight: 900;
     text-align-last: left;
     margin-bottom: 20px;
     max-width: 700px;
+    text-align: center;
   }
 
   &__text {
@@ -36,15 +42,28 @@
     font-size: 24px;
     max-width: 545px;
     margin-bottom: 45px;
+
+    @include max-w($lg) {
+      font-size: 20px;
+      color: $black;
+    }
+
+    @include max-w($sm) {
+      font-size: 16px;
+    }
   }
 
   &__phone {
     border: 1px solid #64605bb3;
     border-radius: 27px;
-    padding: 11px 56px;
+    padding: 11px 22px;
     text-align: center;
     background-color: $accent;
-    margin-right: 30px;
+    margin-right: 10px;
+
+            @include max-w($sm) {
+              margin-bottom: 15px;;
+            }
 
     &:focus {
       outline: transparent;
@@ -53,13 +72,17 @@
 
   &__btn {
     position: relative;
-    padding: 11px 92px 11px 51px;
+    padding: 11px 78px 11px 46px;
     background-color: $white;
     box-shadow: 0px 4px 15px rgba(222, 177, 41, 0.8);
     border-radius: 27px;
     transition: color 0.3s,
       background-color 0.3s,
       box-shadow 0.3s;
+
+          @include max-w($sm) {
+            display: block;
+          }
 
     &:hover {
       color: white;
@@ -86,14 +109,24 @@
   }
 
   &__img {
-    background-image: url('../../../images/application-bg.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 746px;
-    height: 428px;
-    position: absolute;
-    right: -262px;
-    top: -104px;
+    position: relative;
+    z-index: -1;
+
+    &::before {
+      @include pseudo;
+      background-image: url('../../../images/application-bg.png');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 661px;
+      height: 383px;
+      position: absolute;
+      right: 27px;
+      top: -69px;
+    }
+
+    @include max-w($sm) {
+      display: none;
+    }
   }
 }

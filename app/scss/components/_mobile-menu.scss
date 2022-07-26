@@ -1,43 +1,27 @@
 .mobile-menu {
   position: fixed;
-  transform: translateX(-200%);
   z-index: 3;
-  transition: transform 0.4s;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  background-color: $basic;
-
-  &__content {
-    min-width: 300px;
-    height: 100vh;
-    padding-top: 170px;
-
-    @include max-h ($xs) {
-      padding-top: 110px;
-    }
-  }
-
-  &__logo.logo {
+  transition: all 1s;
     left: 50%;
-    transform: translate(-50%, -170px);
-
-    @include max-h ($xs) {
-      transform: translate(-50%, -126px);
-    }
-  }
+    top: 50%;
+  transform: translate(-50%,-200%);
+  top: 0;
 
   &__items {
     font-size: 18px;
-    margin-bottom: 6px;
-    padding: 25px 0;
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
+    text-align: center;
+    color: $black;
+    font-weight: 600;
   }
 
   &__item {
+    transition: color 0.3s;
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
 
@@ -48,7 +32,10 @@
   }
 
   &--active {
-    transform: translateX(0);
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
     z-index: 13;
+    top: 200px;
   }
 }

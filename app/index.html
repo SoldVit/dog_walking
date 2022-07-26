@@ -25,11 +25,12 @@
         </svg>
       </a>
 
-       <button class="burger" type="button">
-   <span class="burger__line"></span>
-   <span class="sr-only">Открыть меню</span>
- </button>
- 
+      <input class="burger-checkbox" type="checkbox" id="burger-check">
+<label class="burger-btn" for="burger-check">
+  <span class="burger-btn__icon"></span>
+</label>
+<div class="burger-bg" id="burger-bg"></div>
+
       <ul class="header-menu">
         <li class="header-menu__item">
           <a class="header-menu__link wrapper-click status" href="@link-header">
@@ -73,7 +74,7 @@
 
 <main class="main">
   
-<section class="hero">
+<section class="hero" style="background-image: url('../../../images/hero-bg.png');">
 
   <div class="container">
 
@@ -86,7 +87,7 @@
           в пределах Северного района
         </h2>
         <div class="hero__link-box">
-          <button class="hero__btn btn">
+          <button class="hero__btn btn" type="submit">
             Заказать пробный выгул
           </button>
           <a class="hero__link wrapper-click status" href="#">
@@ -175,9 +176,9 @@
         </div>
         <form class="application__link-box">
           <label class="application__label">
-            <input class="application__phone" type="tel" name="phone" placeholder="+7 (999) 999-99-99">
+            <input class="application__phone" type="tel" name="Телефон" placeholder="+7 (999) 999-99-99" required>
           </label>
-          <button class="application__btn animate__tada wow animate__animated" data-wow-delay="2s">
+          <button class="application__btn animate__tada wow animate__animated" data-wow-delay="2s" type="submit">
             Попробовать
             <svg class="application__btn-img">
               <use href="../../../images/sprite.svg#application--arrow"></use>
@@ -293,7 +294,7 @@
               С овчаркой активно занимаюсь дрессировкой: фризби, фризби-фристайлом, аджилити, пастьбой.
             </p>
           </div>
-          <button class="expert__btn btn">
+          <button class="expert__btn btn" type="submit">
             Забронировать
             <svg class="expert__btn-img">
               <use href="../../../images/sprite.svg#application--arrow">
@@ -388,7 +389,7 @@
               С овчаркой активно занимаюсь дрессировкой: фризби, фризби-фристайлом, аджилити, пастьбой.
             </p>
           </div>
-          <button class="expert__btn btn">
+          <button class="expert__btn btn" type="submit">
             Забронировать
             <svg class="expert__btn-img">
               <use href="../../../images/sprite.svg#application--arrow">
@@ -425,7 +426,7 @@
 <section class="price">
 
   <div class="container">
-    
+
     <h2 class="price__title title">
       Цены
     </h2>
@@ -437,49 +438,49 @@
         <div class="price__inner">
           <form class="price__chekbox-form" action="#">
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox" checked>
+              <input class="price__chekbox-input" type="checkbox" checked name="Выгул в свободном темпе">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Выгул в свободном темпе
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name=" Выгул активный, игра с собакой">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Выгул активный, игра с собакой
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="  Выгул с элементами дрессуры">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Выгул с элементами дрессуры
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox" checked>
+              <input class="price__chekbox-input" type="checkbox" checked name="Мытьё лап после выгула">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Мытьё лап после выгула
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="Кормление сухим кормом">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Кормление сухим кормом
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="Отвезти к ветиринару (60 минут)">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Отвезти к ветиринару (60 минут)
               </span>
             </label>
             <label class="price__chekbox-label">
-              <input class="price__chekbox-input" type="checkbox">
+              <input class="price__chekbox-input" type="checkbox" name="   Фото и видео отчёт">
               <span class="price__chekbox"></span>
               <span class="price__chekbox-text">
                 Фото и видео отчёт
@@ -488,21 +489,21 @@
           </form>
 
           <div class="price__total">
-            <div class="price__total-prompt">
-              <span class="price__total-text">
+            <form class="price__total-prompt" name="Количество выгулов">
+              <label class="price__total-text" for="price__total-amount">
                 Количество выгулов:
-              </span>
+              </label>
               <span class="price__total-icon"
                 data-tooltip="Количество выгулов будет привязано к вашему номеру телефона">
                 i
               </span>
-            </div>
-            <input class="price__total-amount" type="number" min="1" max="100" value="1">
+              <input class="price__total-amount" id="price__total-amount" type="number" min="1" max="100" value="1">
+            </form>
             <div class="price__total-expert">
               <span class="price__total-span">Выгульщик</span>
               <form class="price__total-form" action="#">
                 <label class="price__total-label">
-                  <select class="price__total-select" name="expert">
+                  <select class="price__total-select" name="Специалист">
                     <option value="every">Любой</option>
                     <option value="anna">Анна</option>
                     <option value="varvara">Варвара</option>
@@ -526,7 +527,6 @@
     </div>
   </div>
 </section>
-
 <section class="reviews">
 
   <div class="container">
@@ -718,42 +718,44 @@
       </li>
     </ul>
 
-    <button class="reviews__btn">
+    <button class="reviews__btn" type="submit">
       Оставить свой отзыв
     </button>
 
   </div>
 </section>
 
-<section class="connection">
+<section class="connection" style="background-image: url('../../../images/connection-bg.jpg');">
 
   <div class="container">
 
-    <form class="connection__form" action="#">
-      <div class="connection__label">
-        <div class="connection__decor"></div>
-        <h2 class="connection__title title">
-          У вас остались вопросы?
-        </h2>
-        <h3 class="connection__subtitle">
-          Напишите нам и администратор перезвонит вам в течении 3 минут:
-        </h3>
-        <span class="connection__text">
-          Ваш вопрос:
-        </span>
-        <input class="connection__input-question" type="text">
-        <span class="connection__text">
-          Ваш телефон:
-        </span>
-        <div class="connection__inner">
-          <input class="connection__input-tel" type="text" placeholder="+7 (___) ___-__-__">
-          <button class="connection__btn btn">
-            Отправить
-          </button>
+
+      <form class="connection__form" action="#">
+        <div class="connection__label">
+          <div class="connection__decor"></div>
+          <h2 class="connection__title title">
+            У вас остались вопросы?
+          </h2>
+          <h3 class="connection__subtitle">
+            Напишите нам и администратор перезвонит вам в течении 3 минут:
+          </h3>
+          <span class="connection__text">
+            Ваш вопрос:
+          </span>
+          <input class="connection__input-question" type="text" name="Вопрос" required>
+          <span class="connection__text">
+            Ваш телефон:
+          </span>
+          <div class="connection__inner">
+            <input class="connection__input-tel" type="text" placeholder="+7 (___) ___-__-__" name="Телефон" required>
+            <button class="connection__btn btn" type="submit">
+              Отправить
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
+
 </section>
 </main>
 
@@ -800,7 +802,7 @@
       </div>
 
       <div class="footer__contacts">
-        <a class="footer__tel status wrapper-click" href="#">
+        <a class="footer__tel status wrapper-click" href="tel:+79095553645">
           +7 (909) 555-36-45
         </a>
         <a class="footer__link-form status wrapper-click" href="#connection">
@@ -855,55 +857,36 @@
 
     <div class="container">
 
-      <a class="logo mobile-menu__logo" href="#">
-        <img class="logo__img mobile-menu__logo-img" width="121" height="161" src="../../images/sprite.svg#logo"
-          alt="Логотип сайта">
-      </a>
-
-       <button class="burger burger--close" type="button">
-   <span class="burger__line"></span>
-   <span class="sr-only">Открыть меню</span>
- </button>
- 
+      
 
       <ul class="mobile-menu__items">
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link mobile-menu__link--active status  wrapper-click" href="#catalog">
-            Products
+          <a class="mobile-menu__link mobile-menu__link--active  wrapper-click" href="#catalog">
+            Наши специалисты
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#catalog-reviews">
-            Who we are
+          <a class="mobile-menu__link wrapper-click" href="#catalog-reviews">
+            Приложение
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#concept">
-            Concept Store
+          <a class="mobile-menu__link wrapper-click" href="#concept">
+            Цены
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#recipes">
-            Recipes
+          <a class="mobile-menu__link wrapper-click" href="#recipes">
+            Отзывы
           </a>
         </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#">
-            Log In
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link status wrapper-click" href="#">
-            Cart (0)
-          </a>
-        </li>
+
       </ul>
     </div>
   </div>
 </div>
 
 <div class="overlay"></div>
-
 <script src="js/main.min.js"></script>
 </body>
 </html>

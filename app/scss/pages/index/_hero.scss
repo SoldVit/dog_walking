@@ -1,12 +1,27 @@
 .hero {
   margin-bottom: 120px;
-  background-image: url('../../../images/hero-bg.png');
   background-position: right;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  @include max-w($xl) {
+    margin-bottom: 80px;
+  }
+
+  @include max-w($sm) {
+    margin-bottom: 60px;
+  }
 
   &__content {
     padding-top: 200px;
+
+    @include max-w($lg) {
+      padding-top: 150px;
+    }
+
+    @include max-w($sm) {
+      padding-top: 120px;
+    }
   }
 
   &__title {
@@ -15,6 +30,14 @@
     color: $black;
     margin-bottom: 20px;
     line-height: 60px;
+
+    @include max-w($lg) {
+      font-size: 32px;
+    }
+
+    @include max-w($sm) {
+      font-size: 24px;
+    }
   }
 
   &__subtitle {
@@ -23,6 +46,10 @@
     color: $black;
     margin-bottom: 40px;
     @include text-shorten(3);
+
+    @include max-w($lg) {
+      font-size: 16px;
+    }
   }
 
   &__link-box {
@@ -31,6 +58,10 @@
 
   &__btn {
     margin-right: 30px;
+
+    @include max-w($sm) {
+      margin-bottom: 35px;
+    }
   }
 
   &__link {
@@ -38,6 +69,10 @@
     padding-left: 34px;
     position: relative;
     color: $black;
+
+    @include max-w($sm) {
+      display: block;
+    }
 
     &::before {
       @include pseudo;
@@ -56,11 +91,19 @@
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 103px;
+
+    @include max-w($lg) {
+      font-size: 18px;
+    }
   }
 
   &__items {
     display: flex;
     align-items: center;
+
+    @include max-w($sm) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -69,11 +112,20 @@
     &:not(:last-child) {
       margin-right: 41px;
     }
+
+    @include max-w($sm) {
+      margin-bottom: 75px;
+      align-self: flex-start;
+    }
   }
 
   &__item-link {
     display: block;
     position: relative;
+
+    @include max-w($lg) {
+      font-size: 14px;
+    }
 
     &::before {
       @include pseudo;

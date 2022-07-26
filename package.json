@@ -27,6 +27,7 @@
     "jquery.maskedinput": "^1.4.1",
     "rateyo": "^3.0.0-alpha.2",
     "sass": "^1.43.4",
+    "slick-carousel": "^1.8.1",
     "slick-slider": "^1.8.2",
     "wowjs": "^1.1.3"
   }
